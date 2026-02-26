@@ -16,17 +16,18 @@
 
 package de.codecentric.boot.admin.client.registration;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.json.JsonMapper;
 import com.jayway.jsonpath.DocumentContext;
 import com.jayway.jsonpath.JsonPath;
 import org.junit.jupiter.api.Test;
-import tools.jackson.databind.json.JsonMapper;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 class ApplicationTest {
 
 	@Test
-	void test_json_format() {
+	void test_json_format() throws JsonProcessingException {
 		JsonMapper jsonMapper = JsonMapper.builder().build();
 
 		Application app = Application.create("test")
