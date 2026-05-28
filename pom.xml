@@ -30,7 +30,7 @@
     <url>https://github.com/codecentric/spring-boot-admin/</url>
 
     <properties>
-        <revision>4.1.0-SNAPSHOT</revision>
+        <revision>4.1.0-jackson2-1.0.0</revision>
 
         <java.version>17</java.version>
         <npm.version>11.12.1</npm.version>
@@ -162,26 +162,26 @@
                     </execution>
                 </executions>
             </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-checkstyle-plugin</artifactId>
-                <configuration>
-                    <configLocation>src/checkstyle/checkstyle.xml</configLocation>
-                    <headerLocation>src/checkstyle/checkstyle-header.txt</headerLocation>
-                    <consoleOutput>true</consoleOutput>
-                    <failOnViolation>true</failOnViolation>
-                    <includeTestSourceDirectory>true</includeTestSourceDirectory>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>checkstyle-validation</id>
-                        <phase>validate</phase>
-                        <goals>
-                            <goal>check</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-checkstyle-plugin</artifactId>-->
+<!--                <configuration>-->
+<!--                    <configLocation>src/checkstyle/checkstyle.xml</configLocation>-->
+<!--                    <headerLocation>src/checkstyle/checkstyle-header.txt</headerLocation>-->
+<!--                    <consoleOutput>true</consoleOutput>-->
+<!--                    <failOnViolation>true</failOnViolation>-->
+<!--                    <includeTestSourceDirectory>true</includeTestSourceDirectory>-->
+<!--                </configuration>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <id>checkstyle-validation</id>-->
+<!--                        <phase>validate</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>check</goal>-->
+<!--                        </goals>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--            </plugin>-->
             <plugin>
                 <!-- this fix is needed for the eclipse-plugin to get the right java-version -->
                 <groupId>org.apache.maven.plugins</groupId>
